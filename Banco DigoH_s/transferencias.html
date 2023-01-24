@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pix.css">
+    <link  rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"  crossorigin="anonymous">
+    <script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"  crossorigin="anonymous"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"  crossorigin="anonymous"></script>
+    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">    
+    <title>Banco DigoH's</title>
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand">Bootstrap Hamburger Menu</a>
+        <div class="entrar">
+            <a href="index.html" class="myButton">SAIR</a>
+                </div>
+
+        <h1 class="pagamentos">Transferências</h1>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="emprestimos.html">Empréstimos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="transferencias.html">Transferências</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="extrato.html">Extrato</a>
+                </li>
+                <li class="nav-item">
+                  <button onclick="window.location.href='./index.html';">Sair</button>
+              </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<br><br><br>
+<main>
+  <section class="main-section">
+      <div class="container-main">
+          <div class="wrapper">
+
+              <div class="info-pix">
+                  <div class="info-row">
+                      <div class="label">
+                          <h1>PIX/TED</h1>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="info-options">
+                      <p>Clique em pagamento</p>
+                      <button id="pag-pix">PAGAMENTO</button>
+                  </div>
+              </div>
+
+              <div class="input-chave">
+                  <p>Insira a chave Pix</p>
+                  <hr>
+                  <input id="chave" type="text" placeholder=" CPF/CNPJ, celular, e-mail ou aleatória" maxlength="35" required>
+                  <button id="next-step">PROXIMO</button>
+              </div>
+
+
+
+              <div class="enviar-pag">
+                  <p class="p-head">Dados de pagamento</p>
+                  <!-- <input type="text" placeholder=" Insira o valor"> -->
+                  <!-- <hr> -->
+                  <div class="input-valor">
+                      <p>Valor</p>
+                      <input id="input-valor" onkeypress="return onlyNumberKey(event)" type="text" placeholder=" Ex: R$ 10,00" maxlength="4" required>
+                  </div>
+                  <hr>
+                  <div class="item">
+                    <form>
+                        Nome do destinatario: <input type="text" name="nome"><br>
+                    </form>
+                  </div>
+                  <div class="item">
+                      <p>Agência</p>
+                      <p id="agencia">***.000.000-**</p>
+                  </div>
+                  <div class="item">
+                    <form>
+                       Banco: <input type="text" name="nome"><br>
+                    </form>
+                  </div>
+                  <hr>
+                  <input type="text" placeholder=" Descrição (opicional)">
+                  <div class="last-part">
+                      <div class="option-form">
+                          <p>Forma de pagamento</p>
+                          <p>Saldo: <span id="saldo">R$ 1500,00</span></p>
+                      </div>
+                      <button id="pagar-pix">Pagar</button>
+                  </div>
+
+              </div>
+
+              <div class="confirm">
+                  <p><i class='bx bxs-check-circle'></i>PAGAMENTO REALIZADO COM SUCESSO</p>
+                  <hr>
+                  <button onclick="window.location.href='./pagamentos.html';">Sair</button>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+<script src="pix/ted.js"></script>
+
+
+<div id="page-container">
+    <div id="content-wrap">
+
+    </div>
+    <footer id="footer"></footer>
+  </div>
+<footer class="bg-dark text-light">
+    <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col-4">
+        <ul class="nav flex-column">
+          <li class="nav-link"><a href="#">Contato</a></li>
+          <li class="nav-link"><a href="#">Suporte</a></li>
+        </ul>
+      </div>
+      <div class="col-8">
+        <p>
+            Somos um banco feito do povo para o povo.
+        </p>
+        <ul class="nav">
+          <li class="nav-link" ><i class="fab fa-facebook fa-3x "></i></li>
+          <li class="nav-link"><i class="fab fa-instagram fa-3x"></i></li>
+          <li class="nav-link"><i class="fab fa-twitter fa-3x"></i></li>
+          <li class="nav-link"><i class="fab fa-whatsapp fa-3x"></i></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="text-center" style="background-color: #333; padding: 15px;" >
+      &copy 2022 Copyright: <a href="#">Banco DigoH's</a>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
